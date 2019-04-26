@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Integrating Protein-Protein and Genetic Interactions"
-date:   2019-04-09 01:46:31 -0500
+title: "Integrating Protein-Protein and Genetic Interactions"
+date: 2019-04-09 01:46:31 -0500
 categories: jekyll update
 author: Nada Elnour
 ---
