@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "Integrating Protein-Protein and Genetic Interactions"
 date:   2019-04-09 01:46:31 -0500
 categories: jekyll update
 ---
+# Integrating Protein-Protein and Genetic Interactions
 
 ## Preamble [^1]
 PPIs describe the physical relationships between the proteins, and genetic interactions provide somewhat of a logical framework to organize this information. By integrating both, we can construct a hypothetical pathway that accounts for: redundancy/salvage, activation, and inhibition. For an interaction pair (protein 1 $$\rightarrow$$ protein 2), I define the following terms:
