@@ -10,8 +10,7 @@ author: Nada Elnour
 
 Finite State Automata (FSA) are used in modelling reactive or event-driven systems. provided that the system's/problems are small. Once the problems are large, the number of states explode in size - i.e. the problems become unmanageable but the problem still requires an event-driven solution.
 
-The cause of this state explosion is repetition:
-![pyDehydro](/imgs/pyDehydro.png)
+The cause of this state explosion is repetition.
 
 Solution?
 
@@ -19,7 +18,15 @@ Group the states together to share transitions whenever possible. Devised by Dav
 
 ## HFSA
 
-Because they are built bottom-up, the superstates and their components behave the same. A form of behavioural inheritance mimicking OOP inheritance, substate transition profiles can impart adaptation to the superstate. A substate can also override the superstate's *modus operandi* thereby contributing polymorphism. In short, the Liskov substitution principle applies for superstates and their substates.
+Take for example pyruvate dehydrogenase of the pyruvate dehydrogenase complex (PDC), E<sub>1</sub>. 
+
+![pyDehydro](/imgs/pyDehydro.png)
+In the above FSA, TPP is thiamine pyrophosphate. The FSA does not distinguish between the order of substrate binding, with either substrate priming E<sub>1</sub> to an intermediate state and the other's binding transitioning the system to the final (double circled) state. 
+
+It's clear how one can simplify the above automaton provided the order of binding does not matter. For example,
+![pyDehydro](/imgs/hfsm.png)
+
+Because they are built bottom-up, the superstates and their components behave the same. A form of behavioural inheritance mimicking OOP inheritance, substate transition profiles can impart adaptation to the superstate. A substate can also override the superstate's *modus operandi* thereby contributing polymorphism. In short, Liskov's substitution principle applies for superstates and their substates.
 
 [^1]:
     Harel, D. (1987) Statecharts: A Visual Formalism for Complex Systems. *Sci Comp Prog* 231--274.
