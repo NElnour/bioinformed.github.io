@@ -5,4 +5,4 @@ layout: default
 ## Posts
 
 1. [Integrating Protein-protein and Genetic Interactions](./idekerDataSet.html) - *09 April 2019*
-2. [Hierarchical Finite State Automata](./hfsa.html) - *25 April 2019*
+2. [Biological Hierarchical Finite State Automata](./hfsa.html) - *25 April 2019*
