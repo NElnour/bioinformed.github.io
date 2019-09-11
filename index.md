@@ -2,6 +2,7 @@
 layout: default
 ---
 
+[About me](./about.html)
 ## Posts
 
 1. [Integrating Protein-protein and Genetic Interactions](./idekerDataSet.html) - *09 April 2019*
