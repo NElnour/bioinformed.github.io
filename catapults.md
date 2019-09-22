@@ -20,7 +20,7 @@ Our grade 12 physics project would not launch boulders, arrows, or people - alth
 2. **Accuracy targeting**: hitting a target board;
 3. **Long-range shooting**: what is the longest projectile range that the catapult can achieve? 
 
-My partner for the project and I had differing views on the kind of catapult we should build. One idea was a *trebuchet* since catapults are essentially meant to cause gross, non-specific damage (see below, left). Another, to build a sling-shot catapult (the *Leonardo da Vinci catapult*; LdV sling) because we can achieve accuracy and we do not need a heavy stabilizing base (see below, right).
+My partner for the project and I had differing views on the kind of catapult we should build. One idea was a *trebuchet* since catapults are essentially meant to cause gross, non-specific damage (see below). Another, to build a sling-shot catapult (the *Leonardo da Vinci catapult*; LdV sling) because we can achieve accuracy and we do not need a heavy stabilizing base (see below).
 
 ![Trebuchet schematic](/imgs/trebuchet.jpeg "trebuchet schematic") ![LdV](/imgs/slingshot.png "Leonardo da Vinci's catapult")
 
