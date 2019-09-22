@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Catapults and Other Redemptions"
-date: 2019-09-22 22:07:30 -0500
+date: 2019-09-22 15:00:00 -0500
 author: Nada Elnour
 ---
 
