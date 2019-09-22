@@ -22,9 +22,9 @@ The project had three evaluation categories:
 
 My partner for the project and I had differing views on the kind of catapult we should build. His idea was that since catapults are essentially meant to cause gross, non-specific damage, we should focus on long-range shooting only and build a *trebuchet* (see below). My idea was to build a catapult that functions as a slingshot (the *Leonardo Da Vinci catapult*), because we can achieve accuracy and we do not need a heavy stabilizing base.
 
-![Trebuchet schematic](/imgs/trebuchet.jpeg "trebuchet schematic") ![LDV](/imgs/slingshot.png "the Leonardo Da Vinci catapult")
+![Trebuchet schematic](/imgs/trebuchet.jpeg "trebuchet schematic") ![LDV](/imgs/slingshot.png "Leonardo Da Vinci's catapult")
 
-[Trebuchet image source](https://www.instructables.com/id/3-Ft-Hanging-Counterweight-Trebuchet/); [Leonardo Da Vinci image source](https://www.popularmechanics.com/home/how-to-plans/how-to/g1558/how-to-build-leonardo-da-vincis-catapult/).
+[Trebuchet image source](https://www.instructables.com/id/3-Ft-Hanging-Counterweight-Trebuchet/); [Leonardo Da Vinci's catapult image source](https://www.popularmechanics.com/home/how-to-plans/how-to/g1558/how-to-build-leonardo-da-vincis-catapult/).
 
 
 
