@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Biological Hierarchical Finite State Automata"
+title: "Catapults and other redemptions"
 date: 2019-09-22 22:07:30 -0500
 author: Nada Elnour
 ---
