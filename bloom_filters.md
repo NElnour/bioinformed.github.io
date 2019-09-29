@@ -1,5 +1,6 @@
 ---
 layout: post
+mathjax: true
 title: "Bloom Filters"
 date: 2019-09-29 14:00:00 -0500
 author: Nada Elnour
