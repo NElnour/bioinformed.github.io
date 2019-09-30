@@ -6,11 +6,11 @@ date: 2019-09-29 18:00:00 -0500
 author: Nada Elnour
 ---
 
-Bloom filters are data structures that speed up set querying [1]. To do so, a bloom filter makes querying a non-deterministic decision problem that returns if the item of interest is **not** in a set. While lossy, the approach allows efficient search and queying of large sets to test membership, because the two operations are independent of the size of the set.
+Bloom filters are data structures that speed up searching a set [1]. To do so, a bloom filter makes searching or **querying** a set a non-deterministic decision problem that returns if the item of interest is **not** in a set. While lossy, this approach removes the dependency of searching on the size of the set. As a result, bloom filters allow us to quickly query a large set to test if it contains the desired item.
 
-Bloom filters are implemented as binary arrays. When the user adds an item $$i$$ to a set, it will first pass through $$k \in \mathbb{N}$$ hash functions, $$f:i \mapsto \{0,1, \cdots , m - 1\}$$, where $$m$$ is the size of the bloom filter. That is, each of the hash functions will map the item to one of the filter's indices. For every map, the bit pointed to by the index is changed to $$1$$. Hashing of an item given the different hash functions (here simply linear transformations) creates a profile or "fingerprint" of indexing. 
+Bloom filters are implemented as binary arrays. When we add an item $$i$$ to a set, the item will first pass through $$k \in \mathbb{N}$$ hash functions, $$f:i \mapsto \{0,1, \cdots , m - 1\}$$, where $$m$$ is the size of the bloom filter. That is, each of the hash functions will map the item to one of the filter's indices. For every map, the bit pointed to by the index is changed to $$1$$ or **True**. Given the different hash functions, hashing an item creates a profile or "fingerprint" of indexing. 
 
-Here's a simple implementation in python:
+Here's a simple implementation in python using linear transformations as hash functions:
 
 ``` python
 from bitarray import bitarray
@@ -63,11 +63,13 @@ def is_item_in_set(item: object, my_hash_functions: list, bloom_filter: int) -> 
 	return counter == len(indices)
 ``` 
 
-To check if an item is in the set, rather than traversing the whole set, it suffices to check if all filter positions returned by indexing with the $$k$$ hash functions return $$1$$. Because of this criterion and hashing collisions, a bloom filter approach may return **false positives** --- it can return that an item is in the set when it isn't. A bloom filter will not however assert the false absence of an item in the set. A bloom filter's size can be paramterized in terms of the expected number of items to be contained, $$n$$, and a permissible false positive rate defined by the user:
+To check if an item is in the set, rather than traversing the whole set, it suffices to check if all filter positions returned by indexing with the $$k$$ hash functions return $$1$$. Because of this criterion and hashing collisions, a bloom filter approach may return **false positives** --- it can return that an item is in the set when it isn't. A bloom filter will not however assert the false absence of an item in the set. 
+
+What's left is then how can we choose $$m$$ and $$k$$ so that we don't skyrocket false positive errors? A bloom filter's size can be expressed in terms of the expected number of items to be contained, $$n$$, and a permissible false positive rate that we want:
 
 $$ m = \frac{n \ln P}{(\ln 2)^2}$$
 
-For such a filter, one can also calculate the number of hash functions needed to keep the false positive rate low [2]. This is given by 
+For such a filter, we can also calculate the number of hash functions needed to keep the false positive rate low [2]. This is given by 
 
 $$ k = \frac{m \ln 2}{n}$$. 
 
@@ -100,9 +102,11 @@ False
 Process finished with exit code 0
 ```
 
-To conclude, bloom filters really are powerful data structures when working with large data. Their inherent simplicity allows them to be extended for searching multidimensional sets [3] and be implemented as objects for object-oriented programming.
+To conclude, bloom filters are really powerful data structures for searching large data sets. Their inherent simplicity allows us to extend them for searching multidimensional sets [3] and implement them as objects for object-oriented programming.
 
 ## References
 1. Bloom, Burton H. (1970), "Space/Time Trade-offs in Hash Coding with Allowable Errors", *Communications of the ACM*, **13** (7): 422–426, doi:[10.1145/362686.362692](https://doi.org/10.1145%2F362686.362692)
 2. Blustein, James; El-Maazawi, Amal (2002), "optimal case for general Bloom filters", *[Bloom Filters — A Tutorial, Analysis, and Survey](https://www.cs.dal.ca/research/techreports/cs-2002-10)*, Dalhousie University Faculty of Computer Science, pp. 1–31
 3. Almeida, Paulo; Baquero, Carlos; Preguica, Nuno; Hutchison, David (2007), "Scalable Bloom Filters", *Information Processing Letters*, **101** (6): 255–261, doi:[10.1016/j.ipl.2006.10.007](https://doi.org/10.1016%2Fj.ipl.2006.10.007)
+
+********
