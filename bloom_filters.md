@@ -65,7 +65,7 @@ def is_item_in_set(item: object, my_hash_functions: list, bloom_filter: int) -> 
 
 To check if an item is in the set, rather than traversing the whole set, it suffices to check if all filter positions returned by indexing with the $$k$$ hash functions return $$1$$. Because of this criterion and hashing collisions, a bloom filter approach may return **false positives** --- it can return that an item is in the set when it isn't. A bloom filter will not however assert the false absence of an item in the set. 
 
-What's left is then how can we choose $$m$$ and $$k$$ so that we don't skyrocket false positive errors? A bloom filter's size can be expressed in terms of the expected number of items to be contained, $$n$$, and a permissible false positive rate that we want:
+So, how can we choose $$m$$ and $$k$$ so that we don't skyrocket false positive errors? A bloom filter's size can be expressed in terms of the expected number of items to be contained, $$n$$, and a permissible false positive rate that we want:
 
 $$ m = \frac{n \ln P}{(\ln 2)^2}$$
 
